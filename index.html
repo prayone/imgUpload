@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-cn">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<head>
+    <meta charset="UTF-8">
+    <title>lrz4 demo&test</title>
+
+    <link rel="stylesheet" href="./bootstrap.min.css?v=1e35cd1"/>
+    <style>
+        
+        .tip {
+            position: relative;
+            top: 15px;
+            right: 10px;
+        }
+        /*遮罩层*/
+    
+    /*遮罩层*/
+        .z_mask {
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .5);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999;
+            display: none;
+        }
+        .z_alert {
+            font-size: 14px;
+            width: 210px;
+            height: 100px;
+            background: #fff;
+            text-align: center;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top:0;
+            bottom:0;
+            margin: auto;
+        }
+        .z_alert p:nth-child(1) {
+            line-height: 50px;
+            height: 50px;
+        }
+        
+        .z_alert p:nth-child(2) span {
+            display: inline-block;
+            width: 104px;
+            height: 50px;
+            float: left;
+            line-height: 50px;
+            border-top: 1px solid #ddd;
+        }
+        .z_cancel {
+            border-right: 1px solid #ddd;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div id="upload-container" class="col-xs-12 text-center">
+            <input accept="image/*" type="file"/>
+        </div>
+    </div>
+    <button onclick="submit()">提交</button>
+    <!--遮罩层-->
+    <div class="z_mask">
+        <!--弹出框-->
+        <div class="z_alert">
+            <p>确定要删除这张图片吗？</p>
+            <p>
+                <span class="z_cancel">取消</span>
+                <span class="z_sure">确定</span>
+            </p>
+        </div>
+    </div>
+</div>
+
+<script src="./dist/lrz.bundle.js?v=7687367"></script>
+<script src="./index.js?v=27ce5f7"></script>
+</body>
+</html>
